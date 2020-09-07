@@ -19,6 +19,7 @@ public class FriendController {
 
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String index(@RequestParam(name = "friend", required = false) String name, Model model) {
+		friends = new ArrayList<Friend>();
 		Friend friend = new Friend();
 		model.addAttribute("friend", friend);
 		return "index";
@@ -31,5 +32,4 @@ public class FriendController {
 		System.out.println(friends);
 		return "index";
 	}
-
 }
