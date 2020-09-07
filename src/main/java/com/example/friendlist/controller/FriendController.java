@@ -29,7 +29,9 @@ public class FriendController {
 	public String index(@ModelAttribute(name = "friend") Friend friend, Model model) {
 		friends.add(friend);
 		model.addAttribute("friends", friends);
-		System.out.println(friends);
+		// NEXT 2 LINES EMPTY THE NAME FIELD WHEN NEEDED
+		friend = new Friend();
+		model.addAttribute("friend", friend);
 		return "index";
 	}
 }
