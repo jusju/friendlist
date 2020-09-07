@@ -12,7 +12,7 @@
 
 <h1>Add new friend to list</h1>
 <form action="#" th:action="@{/index}" th:object="${friend}"
-method="post">
+method="get">
 <p>Name: <input type="text" th:field="*{name}"/></p>
 <p><input type="submit"value="Submit"/></p></form>
 </body>

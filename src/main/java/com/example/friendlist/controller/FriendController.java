@@ -17,7 +17,7 @@ public class FriendController {
 	// INTRODUCT FRIENDLIST ATTRIBUTE, THAT WILL HOLD LIST OF FRIENDS
 	private List<Friend> friends = new ArrayList<Friend>();
 
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String index(@RequestParam(name = "friend", required = false) String name, Model model) {
 		friends = new ArrayList<Friend>();
 		Friend friend = new Friend();
@@ -25,7 +25,7 @@ public class FriendController {
 		return "index";
 	}
 
-	@RequestMapping(value = "/index", method = RequestMethod.POST)
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String index(@ModelAttribute(name = "friend") Friend friend, Model model) {
 		friends.add(friend);
 		model.addAttribute("friends", friends);
