@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Server Programming with Spring Boot</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>My friends</h1>
+
+<h1>Add new friend to list</h1>
+<form action="#" th:action="@{/index}" th:object="${friend}"
+method="post">
+<p>Name: <input type="text" th:field="*{name}"/></p>
+<p><input type="submit"value="Submit"/></p></form>
+</body>
+</html>
